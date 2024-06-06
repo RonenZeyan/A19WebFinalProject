@@ -25,7 +25,7 @@ const app = express()
 app.use(express.json()) // Use middleware to parse JSON requests
 
 app.use(cors({   //give the access from frontEnd
-    origin: ['http://localhost:3000', 'https://a19-web-final-project-team-management.vercel.app'],
+    origin: ['http://localhost:3000', 'https://a19-web-final-project-team-management.vercel.app/'],
     methods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
     credentials: true,
     allowedHeaders: ['Content-Type','Authorization']
