@@ -36,7 +36,7 @@ app.use(cors({   //give the access from frontEnd
 app.use(express.static('public'));  
 // mongoose.connect("mongodb://localhost:27017/UsersMissionsManagement")
 //connect to mongodb in cloud 
-mongoose.connect(url)
+mongoose.connect("mongodb+srv://hunterman481:EWsTL72vV9XJOMFy@usersmissionsmanagement.byntanj.mongodb.net/?retryWrites=true&w=majority&appName=UsersMissionsManagement")
 
 
 
@@ -51,6 +51,6 @@ app.use('/', adminRouter )
 
 
 // Start the server
-app.listen(port,()=>{
+app.listen(3001,()=>{
     console.log("server is running")
 })
