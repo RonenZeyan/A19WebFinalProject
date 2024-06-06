@@ -31,13 +31,16 @@ app.use(express.json()) // Use middleware to parse JSON requests
 //     allowedHeaders: 'Content-Type,Authorization'
 // }));
 
-// Configure CORS to allow access from the frontend
-app.use(cors({   //give the access from frontEnd
+app.use(cors({
     origin: 'https://a19-web-final-project-team-management.vercel.app',
     methods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
     credentials: true,
     allowedHeaders: 'Content-Type,Authorization'
-}));
+  }));
+  
+  // Allow CORS preflight requests
+  app.options('*', cors());
+  
 
 app.use(express.static('public'));  
 // mongoose.connect("mongodb://localhost:27017/UsersMissionsManagement")
