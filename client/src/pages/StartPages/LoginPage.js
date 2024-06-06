@@ -36,7 +36,7 @@ export default function Login() {
      */
     const handleSubmit = async (e)=>{
         e.preventDefault()  //to stop refresh to the page 
-        axios.post(`${API_URL}/login`,{Email,Password})
+        axios.post('https://a19-web-final-project-api.vercel.app/login',{Email,Password})
         .then(result => {console.log(result.data)
           const resData = result.data;
           if(resData.loginStatus==true)
