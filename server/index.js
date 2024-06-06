@@ -30,7 +30,7 @@ app.use(cors({   //give the access from frontEnd
     credentials: true,
     allowedHeaders: ['Content-Type','Authorization']
 }));
-
+app.use(cors(corsOptions));
 // app.use(cors({
 //     origin: 'https://a19-web-final-project-team-management.vercel.app',
 //     methods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
