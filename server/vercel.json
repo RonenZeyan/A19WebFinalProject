@@ -2,22 +2,10 @@
   "version": 2,
   "builds": [
     {
-      "src": "*.js",
-      "use": "@vercel/node"
+      "src": "*.js","use":"@vercel/node" 
     }
   ],
   "routes": [
-    {
-      "src": "/login",
-      "methods": ["OPTIONS"],
-      "headers": {
-        "Access-Control-Allow-Origin": "https://a19-web-final-project-team-management.vercel.app",
-        "Access-Control-Allow-Methods": "GET,POST,DELETE,OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type,Authorization",
-        "Access-Control-Allow-Credentials": "true"
-      },
-      "dest": "/"
-    },
     {
       "src": "/(.*)",
       "dest": "/"
