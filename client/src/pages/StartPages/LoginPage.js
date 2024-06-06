@@ -36,7 +36,7 @@ export default function Login() {
      */
     const handleSubmit = async (e)=>{
         e.preventDefault()  //to stop refresh to the page 
-        axios.post(`${API_URL}/login`,{Email,Password})
+        axios.post(`${API_URL}/adminLogin`,{Email,Password})
         .then(result => {console.log(result.data)
           const resData = result.data;
           if(resData.loginStatus==true)
