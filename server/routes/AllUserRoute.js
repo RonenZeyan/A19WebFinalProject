@@ -9,6 +9,7 @@ const upload = require('../middleware/uploadimage')
  * Each route is mapped to a corresponding function in controller that handles logic.
  */
 
+
 router.post('/login', allUserRoute.login)  //user login route
 router.get('/newUserMissions/:id', allUserRoute.getNewUserMissions) //get all the mission in status waiting
 router.get('/ExistingUserMissions/:id', allUserRoute.getExistingUserMissions) //get all the missions in status "in process" and "completed" 
