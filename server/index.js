@@ -114,7 +114,7 @@ const upload = multer({storage}) //multer save the picture
 
 // admin
 //this used when user want to make a login (it check if the user is admin or normal user ) and make a token 
-app.post('/adminLogin',(req,res)=>{
+app.post('/login',(req,res)=>{
     const {Email,Password} = req.body
     console.log(Email,Password)
     UserModel.find({email:Email,password:Password})
